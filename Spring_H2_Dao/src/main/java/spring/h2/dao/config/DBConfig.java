@@ -60,7 +60,7 @@ public class DBConfig {
 		sessionFactory.setDataSource(getHikariDataSource());
 		Properties props = new Properties();
 		props.setProperty("hibernate.show_sql", "true");
-		props.setProperty("hibernate.hbm2ddl.auto", "none");
+		props.setProperty("hibernate.hbm2ddl.auto", "validate");
 		props.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 		sessionFactory.setHibernateProperties(props);
 		sessionFactory.setAnnotatedClasses(Book.class);
